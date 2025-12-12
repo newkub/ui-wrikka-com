@@ -24,7 +24,6 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     // "./modules/docs",
     // Configure reexport module
-    ['@wrikka/reexport-module', { paths: ['app/components'] }]
   ],
 
   nitro: {

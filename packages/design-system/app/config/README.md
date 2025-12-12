@@ -48,12 +48,12 @@ export default defineComponentMeta({
 
 ```ts
 // config/components/index.ts
-import buttonMeta from './base/button.meta'
 import loginFormMeta from './auth/login-form.meta'
+import buttonMeta from './base/button.meta'
 
 export const componentMetadata = [
   buttonMeta,
-  loginFormMeta,
+  loginFormMeta
   // เพิ่มที่นี่
 ] as const
 ```
@@ -92,7 +92,7 @@ Metadata อยู่ใน `config/components/`:
 ```ts
 // config/components/base/button.meta.ts
 export default defineComponentMeta({
-  id: 'base-button',
+  id: 'base-button'
   // ...
 })
 ```

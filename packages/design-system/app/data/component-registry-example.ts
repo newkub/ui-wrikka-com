@@ -4,7 +4,8 @@ export const authComponentsRegistry: ComponentMeta[] = [
   {
     id: 'auth-login-form',
     name: 'LoginForm',
-    description: 'A secure login form with email and password fields, remember me option, and forgot password link',
+    description:
+      'A secure login form with email and password fields, remember me option, and forgot password link',
     category: 'auth',
     tags: ['authentication', 'form', 'login', 'security'],
     version: '1.0.0',
@@ -75,7 +76,8 @@ const handleLogin = async (data) => {
   {
     id: 'auth-signup-form',
     name: 'SignUpForm',
-    description: 'User registration form with email, password, password confirmation, and terms acceptance',
+    description:
+      'User registration form with email, password, password confirmation, and terms acceptance',
     category: 'auth',
     tags: ['authentication', 'form', 'registration', 'signup'],
     version: '1.0.0',
@@ -118,7 +120,8 @@ const handleLogin = async (data) => {
   {
     id: 'auth-forgot-password-form',
     name: 'ForgotPasswordForm',
-    description: 'Password reset request form that sends a reset link to user email',
+    description:
+      'Password reset request form that sends a reset link to user email',
     category: 'auth',
     tags: ['authentication', 'form', 'password', 'reset'],
     version: '1.0.0',
@@ -160,7 +163,8 @@ const handleLogin = async (data) => {
   {
     id: 'auth-reset-password-form',
     name: 'ResetPasswordForm',
-    description: 'Password reset form with new password and confirmation fields',
+    description:
+      'Password reset form with new password and confirmation fields',
     category: 'auth',
     tags: ['authentication', 'form', 'password', 'reset'],
     version: '1.0.0',
@@ -252,7 +256,8 @@ const handleLogin = async (data) => {
   {
     id: 'auth-access-denied',
     name: 'AccessDenied',
-    description: 'Error page displayed when user lacks permission (403 Forbidden)',
+    description:
+      'Error page displayed when user lacks permission (403 Forbidden)',
     category: 'auth',
     tags: ['authentication', 'error', '403', 'forbidden', 'access'],
     version: '1.0.0',
@@ -349,7 +354,8 @@ const handleLogin = async (data) => {
   {
     id: 'auth-oauth-callback',
     name: 'OAuthCallback',
-    description: 'OAuth callback handler with loading, success, and error states',
+    description:
+      'OAuth callback handler with loading, success, and error states',
     category: 'auth',
     tags: ['authentication', 'oauth', 'callback', 'social-login'],
     version: '1.0.0',
@@ -398,7 +404,8 @@ const handleLogin = async (data) => {
   {
     id: 'auth-email-verification',
     name: 'EmailVerification',
-    description: 'Email verification page with pending, verified, and expired states',
+    description:
+      'Email verification page with pending, verified, and expired states',
     category: 'auth',
     tags: ['authentication', 'email', 'verification', 'confirmation'],
     version: '1.0.0',
@@ -448,7 +455,8 @@ const handleLogin = async (data) => {
   {
     id: 'auth-ui',
     name: 'AuthUI',
-    description: 'Complete authentication UI system with all auth flows integrated',
+    description:
+      'Complete authentication UI system with all auth flows integrated',
     category: 'auth',
     tags: ['authentication', 'ui', 'complete', 'all-in-one'],
     version: '1.0.0',

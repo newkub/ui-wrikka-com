@@ -1,20 +1,20 @@
-import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'node:path'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   plugins: [vue()],
-  
+
   test: {
     // Test environment
     environment: 'happy-dom',
-    
+
     // Global test APIs
     globals: true,
-    
+
     // Setup files
     setupFiles: ['./test/setup.ts'],
-    
+
     // Coverage
     coverage: {
       provider: 'v8',
@@ -32,13 +32,13 @@ export default defineConfig({
         '**/index.ts'
       ]
     },
-    
+
     // Include/Exclude patterns
     include: [
       'app/**/*.{test,spec}.{js,ts,jsx,tsx}',
       'test/**/*.{test,spec}.{js,ts,jsx,tsx}'
     ],
-    
+
     exclude: [
       'node_modules',
       'dist',
@@ -46,19 +46,19 @@ export default defineConfig({
       '.output',
       'storybook-static'
     ],
-    
+
     // Reporters
     reporters: ['verbose'],
-    
+
     // Watch options
     watch: false,
-    
+
     // Timeout
     testTimeout: 10000,
-    
+
     // Threads
     threads: true,
-    
+
     // Pool options
     pool: 'threads',
     poolOptions: {
@@ -67,7 +67,7 @@ export default defineConfig({
       }
     }
   },
-  
+
   resolve: {
     alias: {
       '~': resolve(__dirname, './app'),

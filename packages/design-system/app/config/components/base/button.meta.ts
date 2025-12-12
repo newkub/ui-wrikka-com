@@ -7,11 +7,11 @@ export default defineComponentMeta({
   description: 'A versatile button component with multiple variants and sizes',
   category: 'base',
   status: 'stable',
-  
+
   // Tags & Relations
   tags: ['button', 'action', 'interactive', 'form'] as const,
   related: ['base-icon-button', 'base-link'] as const,
-  
+
   // Component API
   props: {
     type: {
@@ -62,13 +62,13 @@ export default defineComponentMeta({
       description: 'Icon position'
     }
   } as const,
-  
+
   slots: ['default'] as const,
-  
+
   events: {
     click: 'Emitted when button is clicked'
   } as const,
-  
+
   // Examples
   examples: [
     {

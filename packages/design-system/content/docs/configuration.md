@@ -27,18 +27,18 @@ export default defineNuxtConfig({
       ]
     }
   },
-  
+
   // Modules
   modules: [
     '@nuxt/content',
     '@unocss/nuxt'
   ],
-  
+
   // Content module configuration
   content: {
     // Configuration options for @nuxt/content
   },
-  
+
   // UnoCSS configuration
   unocss: {
     // Configuration options for UnoCSS
@@ -63,7 +63,7 @@ export default defineNuxtConfig({
         'remark-gfm', // GitHub Flavored Markdown
         'remark-emoji' // Emoji support
       ],
-      
+
       // Configure rehype plugins
       rehypePlugins: [
         'rehype-highlight' // Syntax highlighting
@@ -117,16 +117,18 @@ export default defineConfig({
       mono: ['Fira Code', 'monospace']
     }
   },
-  
+
   // Presets
   presets: [
     // Add presets here
   ],
-  
+
   // Shortcuts
   shortcuts: {
-    'btn': 'px-4 py-2 rounded-lg bg-primary text-white hover:bg-opacity-90 transition',
-    'card': 'bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700'
+    'btn':
+      'px-4 py-2 rounded-lg bg-primary text-white hover:bg-opacity-90 transition',
+    'card':
+      'bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700'
   }
 })
 ```
@@ -152,7 +154,7 @@ To add new components to your documentation site:
    ```md
    :my-component
    ```
-   
+
    Or with props:
    ```md
    :my-component{prop="value"}

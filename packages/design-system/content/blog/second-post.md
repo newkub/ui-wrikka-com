@@ -37,13 +37,13 @@ Examples are worth a thousand words. Whenever possible, include real code exampl
 ```javascript
 // Good example
 function greetUser(name) {
-  return `Hello, ${name}!`;
+  return `Hello, ${name}!`
 }
 
 // Bad example
 function doSomething(param) {
   // This doesn't actually do anything
-  return param;
+  return param
 }
 ```
 

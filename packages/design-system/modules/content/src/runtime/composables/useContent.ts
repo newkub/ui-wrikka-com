@@ -28,34 +28,34 @@ export const queryContent = (path?: string): QueryBuilder => {
   const runtimeConfig = useRuntimeConfig()
   const contentConfig = (runtimeConfig.public?.content || {}) as ContentConfig
   const baseUrl = contentConfig.apiRoute || '/api/content'
-  
+
   const query: Record<string, any> = {}
   const sortOptions: Record<string, any> = {}
   let limitCount: number | null = null
-  
+
   const builder: QueryBuilder = {
     where(q: Record<string, any>) {
       Object.assign(query, q)
       return builder
     },
-    
+
     sort(options: Record<string, any>) {
       Object.assign(sortOptions, options)
       return builder
     },
-    
+
     limit(count: number) {
       limitCount = count
       return builder
     },
-    
+
     async findOne() {
       // Normalize path - if it ends with '/', remove it
       let normalizedPath = path || ''
       if (normalizedPath.endsWith('/')) {
         normalizedPath = normalizedPath.slice(0, -1)
       }
-      
+
       const params = new URLSearchParams({
         path: normalizedPath,
         query: JSON.stringify(query),
@@ -63,18 +63,18 @@ export const queryContent = (path?: string): QueryBuilder => {
         limit: limitCount ? limitCount.toString() : '1',
         single: 'true'
       })
-      
+
       const response = await fetch(`${baseUrl}?${params}`)
       return await response.json()
     },
-    
+
     async find() {
       // Normalize path - if it ends with '/', remove it
       let normalizedPath = path || ''
       if (normalizedPath.endsWith('/')) {
         normalizedPath = normalizedPath.slice(0, -1)
       }
-      
+
       const params = new URLSearchParams({
         path: normalizedPath,
         query: JSON.stringify(query),
@@ -82,12 +82,12 @@ export const queryContent = (path?: string): QueryBuilder => {
         limit: limitCount ? limitCount.toString() : '',
         single: 'false'
       })
-      
+
       const response = await fetch(`${baseUrl}?${params}`)
       return await response.json()
     }
   }
-  
+
   return builder
 }
 

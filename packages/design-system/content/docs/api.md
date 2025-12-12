@@ -25,6 +25,7 @@ A component for displaying alerts with different types.
 ```
 
 Props:
+
 - `type` (String) - The type of alert (info, success, warning, error)
 
 ### CodeBlock
@@ -40,6 +41,7 @@ A component for displaying code with syntax highlighting.
 ```
 
 Props:
+
 - `language` (String) - The programming language for syntax highlighting
 
 ### FeatureCard
@@ -60,6 +62,7 @@ A component for displaying features in a card format.
 ```
 
 Props:
+
 - `title` (String) - The title of the feature
 - `description` (String) - The description of the feature
 
@@ -74,6 +77,7 @@ The navigation component used in the header and sidebar.
 ```
 
 Props:
+
 - `mobile` (Boolean) - Whether to display the mobile version
 - `docs` (Boolean) - Whether to display documentation navigation
 
@@ -98,6 +102,7 @@ A component for displaying a table of contents.
 ```
 
 Props:
+
 - `items` (Array) - The table of contents items
 
 ### ThemeToggle
@@ -121,6 +126,7 @@ const { search, results } = useSearch()
 ```
 
 Returns:
+
 - `search` (Function) - Function to perform a search
 - `results` (Ref) - Reactive reference to search results
 

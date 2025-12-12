@@ -1,32 +1,32 @@
 {
-	"bin": {
-		"wrikka-cli": "./dist/index.js"
-	},
-	"dependencies": {
-		"@clack/prompts": "^0.11.0",
-		"picocolors": "^1.0.0"
-	},
-	"devDependencies": {
-		"@types/node": "24.10.1",
-		"typescript": "^5.9.3"
-	},
-	"exports": {
-		".": "./dist/index.mjs",
-		"./package.json": "./package.json"
-	},
-	"files": [
-		"dist"
-	],
-	"main": "./dist/index.mjs",
-	"module": "./dist/index.mjs",
-	"name": "@wrikka/cli",
-	"private": true,
-	"scripts": {
-		"build": "bunx tsdown --exports --dts",
-		"dev": "bun run src/index.ts",
-		"lint": "bunx tsc --noEmit && bunx oxlint --fix"
-	},
-	"type": "module",
-	"types": "./dist/index.d.mts",
-	"version": "0.0.1"
+  "bin": {
+    "wrikka-cli": "./dist/index.js"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "typescript": "^5.9.3"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "name": "@wrikka/cli",
+  "private": true,
+  "scripts": {
+    "build": "bunx tsdown --exports --dts",
+    "dev": "bun run src/index.ts",
+    "lint": "bunx tsc --noEmit && bunx oxlint --fix"
+  },
+  "type": "module",
+  "types": "./dist/index.d.mts",
+  "version": "0.0.1"
 }

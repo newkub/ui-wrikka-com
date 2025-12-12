@@ -85,6 +85,7 @@ You can customize various aspects of the documentation site:
 ### Theme Configuration
 
 Modify the theme in `nuxt.config.ts`:
+
 ```ts
 export default defineNuxtConfig({
   // ... other config
@@ -102,6 +103,7 @@ export default defineNuxtConfig({
 ### Styling
 
 The site uses UnoCSS for styling. You can customize the theme in `uno.config.ts`:
+
 ```ts
 export default defineConfig({
   theme: {

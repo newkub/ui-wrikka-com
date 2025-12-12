@@ -1,14 +1,14 @@
-import { readonly } from "vue";
+import { readonly } from 'vue'
 
 // Simplified type definitions with only what's actually used
-export type ComponentStatus = 
+export type ComponentStatus =
   | 'stable'
   | 'beta'
   | 'alpha'
   | 'deprecated'
   | 'experimental'
 
-export type ComponentCategory = 
+export type ComponentCategory =
   | 'auth'
   | 'data'
   | 'form'
@@ -69,16 +69,16 @@ export function defineComponentMeta(meta: ComponentMeta): ComponentMeta {
 export const useComponentMeta = () => {
   // State - ใช้ Map เพื่อ performance ที่ดี
   const components = useState<Map<string, ComponentMeta>>(
-    "component-meta-store",
-    () => new Map(),
+    'component-meta-store',
+    () => new Map()
   )
   const categories = useState<Map<ComponentCategory, string[]>>(
-    "component-categories",
-    () => new Map(),
+    'component-categories',
+    () => new Map()
   )
   const tags = useState<Map<string, string[]>>(
-    "component-tags",
-    () => new Map(),
+    'component-tags',
+    () => new Map()
   )
 
   const registerComponent = (meta: ComponentMeta) => {
@@ -131,7 +131,7 @@ export const useComponentMeta = () => {
   }
 
   const getComponentsByCategory = (
-    category: ComponentCategory,
+    category: ComponentCategory
   ): ComponentMeta[] => {
     const componentIds = categories.value.get(category) || []
     return componentIds
@@ -148,7 +148,7 @@ export const useComponentMeta = () => {
 
   const getComponentsByStatus = (status: ComponentStatus): ComponentMeta[] => {
     return Array.from(components.value.values()).filter(
-      (meta) => meta.status === status,
+      (meta) => meta.status === status
     )
   }
 
@@ -156,9 +156,11 @@ export const useComponentMeta = () => {
     const lowerQuery = query.toLowerCase()
     return Array.from(components.value.values()).filter(
       (meta: ComponentMeta) =>
-        meta.name.toLowerCase().includes(lowerQuery) ||
-        meta.description.toLowerCase().includes(lowerQuery) ||
-        meta.tags.some((tag: string) => tag.toLowerCase().includes(lowerQuery)),
+        meta.name.toLowerCase().includes(lowerQuery)
+        || meta.description.toLowerCase().includes(lowerQuery)
+        || meta.tags.some((tag: string) =>
+          tag.toLowerCase().includes(lowerQuery)
+        )
     )
   }
 
@@ -203,7 +205,7 @@ export const useComponentMeta = () => {
       byStatus,
       total: allComponents.length,
       totalCategories: categories.value.size,
-      totalTags: tags.value.size,
+      totalTags: tags.value.size
     }
   }
 
@@ -211,7 +213,7 @@ export const useComponentMeta = () => {
     return {
       categories: new Map(categories.value),
       components: new Map(components.value),
-      tags: new Map(tags.value),
+      tags: new Map(tags.value)
     }
   }
 
@@ -245,6 +247,6 @@ export const useComponentMeta = () => {
     registerComponent,
     searchComponents,
     tags: readonly(tags),
-    unregisterComponent,
+    unregisterComponent
   }
 }

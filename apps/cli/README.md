@@ -17,16 +17,19 @@ bun install
 ## Usage
 
 Build the project:
+
 ```bash
 bun run build
 ```
 
 Run in development mode (watch mode):
+
 ```bash
 bun run dev
 ```
 
 Run the CLI after building:
+
 ```bash
 bunx wrikka-cli
 ```
@@ -47,16 +50,19 @@ Done, user!
 ## Development
 
 Run tests:
+
 ```bash
 bun run test
 ```
 
 Lint the code:
+
 ```bash
 bun run lint
 ```
 
 Type checking:
+
 ```bash
 bun run typecheck
 ```

@@ -9,13 +9,15 @@ import { componentMetadata } from '~/config/components'
 
 export default defineNuxtPlugin(() => {
   const { registerComponent } = useComponentMeta()
-  
+
   // Register metadata ทั้งหมด
   componentMetadata.forEach((meta) => {
     registerComponent(meta)
   })
-  
+
   if (process.dev) {
-    console.log(`[Component Meta] Registered ${componentMetadata.length} components`)
+    console.log(
+      `[Component Meta] Registered ${componentMetadata.length} components`
+    )
   }
 })

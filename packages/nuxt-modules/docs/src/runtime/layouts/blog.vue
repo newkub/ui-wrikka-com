@@ -1,6 +1,0 @@
-<template>
-  <div>
-    <h1>Blog Post</h1>
-    <slot />
-  </div>
-</template>
